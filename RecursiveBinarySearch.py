@@ -1,5 +1,7 @@
-# Python binary search program (recursive)
+# Python binary search function (recursive)
 # returns index of x in arr if it exists, else returns -1
+# works for arrays that are already sorted
+
 def bin_search_rec(arr, first, last, x):
 
     # base case check
@@ -23,15 +25,15 @@ def bin_search_rec(arr, first, last, x):
         else:
             return bin_search_rec(arr, mid+1, last, x)
 
-# # Example def
-# arr = [1, 2, 3, 4, 5, 6, 7] 
-# x = 2
+# Example def
+arr = [1, 2, 3, 4, 5, 6, 7] 
+x = 2
   
-# # Test call 
-# result = bin_search_rec(arr, 0, len(arr)-1, x) 
+# Test call 
+result = bin_search_rec(arr, 0, len(arr)-1, x) 
   
-# if result != -1: 
-#     print ("Element exists at index % d" % result) 
+if result != -1: 
+    print ("Element exists at index % d" % result) 
 
-# else: 
-#     print ("Element does not exist in the array") 
+else: 
+    print ("Element does not exist in the array") 
